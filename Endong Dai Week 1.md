@@ -87,7 +87,7 @@
       ```bash
       $ roscore
       $ rosrun turtlesim turtlesim_node
-      $ rosrun <your_package_name> velocity_publisher
+      $ rosrun <package_name> velocity_publisher
       ```
     - **Effect**: The turtle moves in a circular pattern due to the linear and angular velocity commands.
 
@@ -98,7 +98,7 @@
       ```bash
       $ roscore
       $ rosrun turtlesim turtlesim_node
-      $ rosrun <your_package_name> pose_subscriber
+      $ rosrun <package_name> pose_subscriber
       ```
     - **Effect**: The terminal displays the position and orientation of the turtle in real-time.
 
@@ -111,8 +111,8 @@
     - **ROS Terminal Commands**:
       ```bash
       $ roscore
-      $ rosrun <your_package_name> person_publisher
-      $ rosrun <your_package_name> person_subscriber
+      $ rosrun <package_name> person_publisher
+      $ rosrun <package_name> person_subscriber
       ```
     - **Effect**: The terminal displays the published person information: name, age, and height.
 
@@ -123,7 +123,7 @@
       ```bash
       $ roscore
       $ rosrun turtlesim turtlesim_node
-      $ rosrun <your_package_name> turtle_spawn_client
+      $ rosrun <package_name> turtle_spawn_client
       ```
     - **Effect**: A new turtle named "turtle2" spawns at the specified coordinates in the turtlesim window.
 
@@ -134,7 +134,7 @@
       ```bash
       $ roscore
       $ rosrun turtlesim turtlesim_node
-      $ rosrun <your_package_name> turtle_command_server
+      $ rosrun <package_name> turtle_command_server
       $ rosservice call /teleport_turtle "x: 5.0 y: 5.0 theta: 0.0"
       ```
     - **Effect**: The turtle teleports to the specified coordinates (x: 5.0, y: 5.0) with the specified orientation (theta: 0.0).
@@ -148,8 +148,8 @@
     - **ROS Terminal Commands**:
       ```bash
       $ roscore
-      $ rosrun <your_package_name> person_server
-      $ rosrun <your_package_name> person_client
+      $ rosrun <package_name> person_server
+      $ rosrun <package_name> person_client
       ```
     - **Effect**: The terminal displays the received person information and confirms the receipt.
 
@@ -159,7 +159,7 @@
     - **ROS Terminal Commands**:
       ```bash
       $ roscore
-      $ rosrun <your_package_name> parameter_config
+      $ rosrun <package_name> parameter_config
       ```
     - **Effect**: The terminal displays the values of the parameters set in the node.
 
