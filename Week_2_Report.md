@@ -16,9 +16,9 @@
       ```
     - **Effect**: Controlling Turtle 1's movement, Turtle 2 automatically follows (taking shortcuts).
 
-2. **TF view_frames**:
     - **Listening for 5 seconds and saving all coordinate relationships**:
-      ![TF_view effect](file-2039s5B3cciu2D438hVvLr6b.png)
+      <img width="901" alt="Screenshot 2024-06-19 at 17 41 50" src="https://github.com/FURP-2023-2024/Endong-Dai---Weekly-Report/assets/172376395/7a8141bb-ac3e-4792-88ba-1de0eb243ca2">
+
     - **Opening the visualization tool**:
       ```bash
       rosrun rviz rviz -d `rospack find turtle_tf`/rviz/turtle_rviz.rviz
@@ -26,6 +26,7 @@
     - **Effect**: Visualizing the real-time relationship between the two turtles (local coordinates) and the world (global coordinates).
     
     - **View Frames Result**:
-      ![View Frames Result](file-INhqY273JQtKQILxgnFI3FgH.png)
+      <img width="964" alt="Screenshot 2024-06-19 at 18 10 02" src="https://github.com/FURP-2023-2024/Endong-Dai---Weekly-Report/assets/172376395/924c3eb5-702c-45b4-b1f3-3af6d52177f2">
+
 
 ---
