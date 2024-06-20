@@ -7,6 +7,7 @@
 - **Operating System**: Ubuntu 20.04 LTS
 - **Framework Platform**: ROS1 Noetic
 - **Simulation Platform**: Gazebo
+<img width="1728" alt="Screenshot 2024-06-20 at 13 53 07" src="https://github.com/FURP-2023-2024/Endong-Dai---Weekly-Report/assets/172376395/ceda5565-7e6b-494a-b5c5-8a0ec100ef55">
 
 ---
 
