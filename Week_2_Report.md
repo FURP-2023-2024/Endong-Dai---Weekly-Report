@@ -1,4 +1,4 @@
-
+![image](https://github.com/FURP-2023-2024/Endong-Dai---Weekly-Report/assets/172376395/db8ba847-5235-4afb-933e-dcec95b3e863)
 ### Weekly Report 2 for FURP23/24 - Omni-directional-Robot-Collision-Awareness
 
 ---
@@ -74,6 +74,54 @@ Launch files are used to start multiple nodes with a single command. They allow 
 - `turtlesim_remap.launch`: Remaps topics for the Turtlesim node.
 
 Using these launch files can simplify the process of starting and managing multiple ROS nodes, especially for complex systems.
+
+
+---
+
+
+### 4. Using Common Visualization Tools in ROS
+
+#### Log Input Tool
+
+```sh
+$ rqt_console
+```
+
+#### Computation Graph Visualization Tool
+
+```sh
+$ rqt_graph
+```
+
+#### Data Plotting Tool
+
+```sh
+$ rqt_plot
+```
+
+#### Image Rendering Tool
+
+```sh
+$ rqt_image_view
+```
+
+#### Rviz
+
+Rviz is a 3D visualization tool for ROS. It provides a way to visualize the state of a robot in a simulated environment.
+
+```sh
+$ rosrun rviz rviz
+```
+
+#### Gazebo
+
+Gazebo is a powerful robot simulation tool that integrates with ROS.
+
+```sh
+$ roslaunch gazebo_ros willow_garage_world.launch
+```
+
+Effect: Gazebo launches a simulated environment where the robot can interact with different elements and scenarios, providing a realistic testing ground for robot behaviors.
 
 
 ---
