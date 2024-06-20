@@ -74,7 +74,6 @@ Launch files are used to start multiple nodes with a single command. They allow 
 - `turtlesim_remap.launch`: Remaps topics for the Turtlesim node.
 
 Using these launch files can simplify the process of starting and managing multiple ROS nodes, especially for complex systems.
-```
 
 
 ---
