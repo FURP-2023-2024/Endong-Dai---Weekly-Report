@@ -55,3 +55,26 @@ Effect: Similar to the first example, by broadcasting and listening to the TF co
 
 
 ---
+
+### 3. Using Launch Files in ROS
+
+Launch files are used to start multiple nodes with a single command. They allow for easier management of parameters and node execution.
+
+#### Launch File Syntax
+- `<launch>`: Root element of the launch file.
+- `<node>`: Defines a ROS node that will be launched.
+- `<param>`: Sets parameters on the parameter server.
+- `<rosparam>`: Used for loading parameters from YAML files.
+- `<arg>`: Defines an argument that can be passed to the launch file.
+
+#### Examples of Launch Files
+- `simple.launch`: A basic launch file to start nodes.
+- `turtlesim_parameter_config.launch`: Configures parameters for the Turtlesim node.
+- `start_tf_demo_c++.launch`: Starts a TF demonstration using C++ nodes.
+- `turtlesim_remap.launch`: Remaps topics for the Turtlesim node.
+
+Using these launch files can simplify the process of starting and managing multiple ROS nodes, especially for complex systems.
+```
+
+
+---
