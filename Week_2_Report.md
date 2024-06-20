@@ -30,3 +30,28 @@
 
 
 ---
+
+
+2. **Broadcasting and Listening to TF Coordinates (Code)**
+Create the package:
+```sh
+$ cd ~/catkin_ws/src
+$ catkin_create_pkg learning_tf roscpp rospy tf turtlesim
+```
+
+Import the C++ files `turtle_tf_broadcaster` and `turtle_tf_listener`.
+
+Run the ROS program and the related C++ files:
+```sh
+$ roscore
+$ rosrun turtlesim turtlesim_node
+$ rosrun learning_tf turtle_tf_broadcaster __name:=turtle1_tf_broadcaster /turtle1
+$ rosrun learning_tf turtle_tf_broadcaster __name:=turtle2_tf_broadcaster /turtle2
+$ rosrun learning_tf turtle_tf_listener
+$ rosrun turtlesim turtle_teleop_key
+```
+
+Effect: Similar to the first example, by broadcasting and listening to the TF coordinate systems, Turtle 2 will follow Turtle 1's movement.
+
+
+---
