@@ -1,4 +1,3 @@
-![image](https://github.com/FURP-2023-2024/Endong-Dai---Weekly-Report/assets/172376395/db8ba847-5235-4afb-933e-dcec95b3e863)
 ### Weekly Report 2 for FURP23/24 - Omni-directional-Robot-Collision-Awareness
 
 ---
