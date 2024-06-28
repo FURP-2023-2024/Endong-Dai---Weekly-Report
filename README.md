@@ -7,4 +7,6 @@
 - **Follow ROS 21 Talk (17-21)**
 - **Install Cartographer**
 
+## Week 3
+- **Install and Test Turtlrbot3**
 
