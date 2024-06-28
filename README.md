@@ -8,5 +8,5 @@
 - **Install Cartographer**
 
 ## Week 3
-- **Install and Test Turtlrbot3**
+- **Install and Test Turtlebot3**
 
