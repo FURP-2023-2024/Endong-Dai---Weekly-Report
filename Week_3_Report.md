@@ -7,9 +7,8 @@
 **Based on the article:**https://blog.csdn.net/weixin_51015707/article/details/121522342
 
 1. **Install Turtlebot3 dependencies**
-    - **TF Package**: Transforming the relationship between local and global coordinate systems 5 seconds ago.
-    - **Implementation Code**:
-      ```bash
+    
+   ```bash
       sudo apt-get install ros-noetic-joy ros-noetic-teleop-twist-joy ros-noetic-teleop-twist-keyboard ros-noetic-laser-proc ros-noetic-rgbd-launch ros-noetic-depthimage-to-laserscan ros-noetic-rosserial-arduino ros-noetic-rosserial-python ros-noetic-rosserial-server ros-noetic-rosserial-client ros-noetic-rosserial-msgs ros-noetic-amcl ros-noetic-map-server ros-noetic-move-base ros-noetic-urdf ros-noetic-xacro  ros-noetic-compressed-image-transport ros-noetic-rqt-image-view ros-noetic-gmapping ros-noetic-navigation  ros-noetic-interactive-markers rviz
       ```
 
@@ -17,25 +16,46 @@
 
 
 2. **Create a project and install Turtlebot3**
-Create the package:
-```sh
-$ cd ~/catkin_ws/src
-$ catkin_create_pkg learning_tf roscpp rospy tf turtlesim
+
+```bash
+mkdir catkin_turtlebot3
+cd catkin_turtlebot3
+mkdir src
+cd src
+git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+cd ..
+catkin_make
 ```
 
-Import the C++ files `turtle_tf_broadcaster` and `turtle_tf_listener`.
+---
 
-Run the ROS program and the related C++ files:
-```sh
-$ roscore
-$ rosrun turtlesim turtlesim_node
-$ rosrun learning_tf turtle_tf_broadcaster __name:=turtle1_tf_broadcaster /turtle1
-$ rosrun learning_tf turtle_tf_broadcaster __name:=turtle2_tf_broadcaster /turtle2
-$ rosrun learning_tf turtle_tf_listener
-$ rosrun turtlesim turtle_teleop_key
+3. **Turtlebot3 downloaded and compiled**
+```bash
+echo "export TURTLEBOT3_MODEL=waffle" >> ~/.bashrc
+echo "source ~/catkin_turtlebot3/devel/setup.bash" >> ~/.bashrc
+echo $ROS_PACKAGE_PATH
+
 ```
 
-Effect: Similar to the first example, by broadcasting and listening to the TF coordinate systems, Turtle 2 will follow Turtle 1's movement.
+---
 
+4. **Use Turtlebot3 for mapping.**
+```bash
+cd catkin_turtlebot3
+roscore
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+```
+**Effect:** Use key to control the moving of the robot.
+
+**Below are some implements pictures:**
+
+<img width="1109" alt="Screenshot 2024-06-28 at 13 15 36" src="https://github.com/FURP-2023-2024/Endong-Dai---Weekly-Report/assets/172376395/f571fd5b-1173-4024-b2e0-ab24729e80f2">
+<img width="849" alt="Screenshot 2024-06-28 at 13 15 59" src="https://github.com/FURP-2023-2024/Endong-Dai---Weekly-Report/assets/172376395/6acb2d4d-09d8-4d16-b962-99c4ada07498">
+
+**Note:** Use gmapping here. Need to change to cartograher method!
 
 ---
