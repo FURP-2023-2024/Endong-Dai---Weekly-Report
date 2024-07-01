@@ -1,9 +1,9 @@
 
-### Weekly Report 1 for FURP23/24 - Omni-directional-Robot-Collision-Awareness
+## Weekly Report 1 for FURP23/24 - Omni-directional-Robot-Collision-Awareness
 
 ---
 
-#### Setting Up the Environment
+### Setting Up the Environment
 - **Operating System**: Ubuntu 20.04 LTS
 - **Framework Platform**: ROS1 Noetic
 - **Simulation Platform**: Gazebo
@@ -11,7 +11,7 @@
 
 ---
 
-#### Following ROS 21 Talk Video Tutorials 1 - 9
+### Following ROS 21 Talk Video Tutorials 1 - 9
 
 1. **Testing ROS Installation**
     - **Start ROS master**: 
@@ -79,7 +79,7 @@
 
 ---
 
-#### Additional Learning from ROS 21 Talk Tutorials 10 - 16
+### Additional Learning from ROS 21 Talk Tutorials 10 - 16
 
 8. **Publisher Implementation**:
     - **Creating Publisher Code (C++)**:
