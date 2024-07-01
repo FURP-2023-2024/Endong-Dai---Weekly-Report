@@ -4,7 +4,7 @@
 
 #### Install and Test Turtlebot3 
 
-**Based on the article:**https://blog.csdn.net/weixin_51015707/article/details/121522342
+**Based on the article:** https://blog.csdn.net/weixin_51015707/article/details/121522342
 
 1. **Install Turtlebot3 dependencies**
     
