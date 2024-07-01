@@ -4,7 +4,9 @@
 ### Test Turtlebot3 with Cartographer Method(improved)
 
 **Guidance link:** https://blog.csdn.net/gezongbo/article/details/123388655
+
 **Note:** Cartographer and Turtlebot3 have been installed in Week 2 and 3.
+
 **Here, try to connect these two independnent files!**
 
 1. **Set environment variable TURTLEBOT3_MODEL to burger**
