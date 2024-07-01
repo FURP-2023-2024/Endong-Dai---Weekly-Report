@@ -1,8 +1,8 @@
-### Weekly Report 3 for FURP23/24 - Omni-directional-Robot-Collision-Awareness
+## Weekly Report 3 for FURP23/24 - Omni-directional-Robot-Collision-Awareness
 
 ---
 
-#### Install and Test Turtlebot3 
+### Install and Test Turtlebot3 
 
 **Based on the article:** https://blog.csdn.net/weixin_51015707/article/details/121522342
 
