@@ -63,7 +63,7 @@ rosrun map_server map_saver -f ~/map
 
 ---
 
-## 2. Turtlebot3 Simulation - Navigation Parameters
+### 2. Turtlebot3 Simulation - Navigation Parameters
 
 ### TrajectoryPlannerROS vs DWAPlannerROS (Practical Applications)
 - **TrajectoryPlannerROS**: Suitable for scenarios with relatively fixed paths and fewer obstacles. Its trajectory generation and evaluation process is relatively simple, performing well in static environments.
