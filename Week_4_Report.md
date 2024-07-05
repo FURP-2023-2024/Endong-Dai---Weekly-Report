@@ -91,7 +91,7 @@ rosrun map_server map_saver -f ~/map
 - **acc_lim_x:** 
   - Maximum acceleration in the x-direction, set to 1.0 m/s².
 - **acc_lim_y:** 
-  - Maximum acceleration in the y-direction, set to 0.0 m/s².
+  - Maximum acceleration in the y-direction, set to 0.0 m/s². **change to 1.0 m/s².**(omni project)
 - **acc_lim_theta:** 
   - Maximum angular acceleration, set to 0.6 rad/s².
 - **xy_goal_tolerance:** 
@@ -99,7 +99,7 @@ rosrun map_server map_saver -f ~/map
 - **yaw_goal_tolerance:** 
   - Tolerance for the goal orientation in radians, set to 0.05 radians.
 - **holonomic_robot:** 
-  - Indicates if the robot is holonomic (can move in any direction), set to false.
+  - Indicates if the robot is holonomic (can move in any direction), set to false. **change to true.**(omni project)
 - **sim_time:** 
   - The amount of time to simulate forward in seconds, set to 0.8 seconds.
 - **vx_samples:** 
