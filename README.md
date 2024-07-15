@@ -13,3 +13,7 @@
 ## Week 4
 - **Test Turtlebot3 with Cartographer(improved)**
 - **Set Parameters**
+
+## Week 5
+- **Try Omni-Robot Package with Keyboard**
+- **Pre-install RoboRTS-Base**
