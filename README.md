@@ -16,4 +16,4 @@
 
 ## Week 5
 - **Try Omni-Robot Package with Keyboard**
-- **Pre-install RoboRTS-Base**
+- **Install and Build RoboRTS-Base**
