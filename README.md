@@ -17,3 +17,6 @@
 ## Week 5
 - **Try Omni-Robot Package with Keyboard**
 - **Install and Build RoboRTS-Base**
+
+## Week 6
+- **Unitree Go1 Simulation**
