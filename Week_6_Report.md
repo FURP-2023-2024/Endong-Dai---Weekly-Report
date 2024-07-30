@@ -2,6 +2,32 @@
 
 ---
 
+```bash
+# Step 1: 安装必要的依赖包
+sudo apt-get update
+sudo apt-get install build-essential cmake git pkg-config libgtk-3-dev \
+libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev \
+libjpeg-dev libpng-dev libtiff-dev gfortran openexr libatlas-base-dev python3-dev python3-numpy \
+libtbb2 libtbb-dev libdc1394-22-dev
+
+# Step 2: 删除现有的 OpenCV 安装
+sudo apt-get remove --purge '*opencv*'
+
+# Step 3: 下载 OpenCV 3 的源代码
+mkdir -p ~/opencv_build && cd ~/opencv_build
+git clone -b 3.4 https://github.com/opencv/opencv.git
+git clone -b 3.4 https://github.com/opencv/opencv_contrib.git
+
+# Step 4: 编译和安装 OpenCV 3
+cd ~/opencv_build/opencv
+mkdir build && cd build
+cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=~/opencv_build/opencv_contrib/modules ..
+make -j$(nproc)
+sudo make install
+sudo ldconfig
+```
+
+
 
 ### 1. Unitree Go1 simulation install and apply
 
