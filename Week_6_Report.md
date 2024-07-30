@@ -38,6 +38,21 @@ roslaunch laikago_description laikago_rviz.launch
 ```bash
 roslaunch unitree_gazebo normal.launch rname:=a1 wname:=stairs
 rosrun unitree_controller unitree_servo
+
+哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+# Step 1: 卸载 OpenCV 4
+sudo apt-get remove --purge '*opencv*'
+
+# Step 2: 添加 OpenCV 3 的 PPA 并更新包列表
+sudo add-apt-repository ppa:opencv/opencv-3.4
+sudo apt-get update
+
+# Step 3: 安装 OpenCV 3
+sudo apt-get install libopencv-dev=3.4.9+dfsg-1~exp1ubuntu4
+sudo apt-get install python3-opencv=3.4.9+dfsg-1~exp1ubuntu4
 ```
 
 Robot will stand up
