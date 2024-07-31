@@ -13,12 +13,12 @@
     <!-- Run the Base Node -->
     <node pkg="roborts_base" type="roborts_base_node" name="roborts_base_node" output="screen" respawn="true" />
 
-    <node pkg="robort_base" type="chassis" name="chassis_node"/>
+    <node pkg="robort_base" type="chassis" name="chassis_node" />
 
-    <!-- Include the move_base launch file -->
-    <include file="$(find move_base)/launch/move_base.launch">
-        <arg name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/>
-    </include>
+    <!-- Run move_base Node -->
+    <node pkg="move_base" type="move_base" name="move_base" output="screen">
+        <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/>
+    </node>
 </launch>
    ```
 
