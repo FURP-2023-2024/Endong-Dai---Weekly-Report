@@ -2,76 +2,25 @@
 
 ---
 
-创建一个ROS工作空间并编译一个克隆的包，以下是具体的步骤：
 
-### 1. 创建工作空间
-
-1. 打开终端并导航到你希望创建工作空间的目录。例如，桌面目录：
    ```bash
-   cd ~/Desktop
+<launch>
+    <master auto="start"/>
+
+    <!-- Load the Base Parameter -->
+    <rosparam command="load" file="$(find roborts_base)/config/base.yaml" />
+
+    <!-- Run the Base Node -->
+    <node pkg="roborts_base" type="roborts_base_node" name="roborts_base_node" output="screen" respawn="true" />
+
+    <node pkg="robort_base" type="chassis" name="chassis_node"/>
+
+    <!-- Include the move_base launch file -->
+    <include file="$(find move_base)/launch/move_base.launch">
+        <arg name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/>
+    </include>
+</launch>
    ```
-
-2. 创建一个新的工作空间目录，并进入该目录：
-   ```bash
-   mkdir -p robot_ws/src
-   cd robot_ws/src
-   ```
-
-### 2. 克隆包到src目录
-
-在`src`目录中，克隆你希望使用的ROS包。例如，从GitHub克隆一个包：
-   ```bash
-   git clone https://github.com/RoboMaster/RoboRTS-Base.git
-   ```
-
-### 3. 编译工作空间
-
-1. 返回到工作空间的根目录：
-   ```bash
-   cd ~/Desktop/robot_ws
-   ```
-
-2. 使用`catkin_make`命令编译工作空间：
-   ```bash
-   catkin_make
-   ```
-
-### 4. 设置环境
-
-每次打开新的终端时，需要配置ROS环境变量，使新编译的包可用。你可以在`.bashrc`文件中添加下面一行来自动设置环境变量：
-   ```bash
-   echo "source ~/Desktop/robot_ws/devel/setup.bash" >> ~/.bashrc
-   source ~/.bashrc
-   ```
-
-或在每次使用前手动运行：
-   ```bash
-   source ~/Desktop/robot_ws/devel/setup.bash
-   ```
-
-### 例子总结
-
-以下是完整的命令列表，结合以上所有步骤：
-
-```bash
-# 1. 创建工作空间
-cd ~/Desktop
-mkdir -p robot_ws/src
-cd robot_ws/src
-
-# 2. 克隆ROS包
-git clone https://github.com/RoboMaster/RoboRTS-Base.git
-
-# 3. 编译工作空间
-cd ~/Desktop/robot_ws
-catkin_make
-
-# 4. 设置环境（可选）
-echo "source ~/Desktop/robot_ws/devel/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-```
-
-通过上述步骤，你可以创建一个ROS工作空间，克隆一个包并成功编译。
 
 
 
