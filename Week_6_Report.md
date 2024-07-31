@@ -2,30 +2,77 @@
 
 ---
 
+创建一个ROS工作空间并编译一个克隆的包，以下是具体的步骤：
+
+### 1. 创建工作空间
+
+1. 打开终端并导航到你希望创建工作空间的目录。例如，桌面目录：
+   ```bash
+   cd ~/Desktop
+   ```
+
+2. 创建一个新的工作空间目录，并进入该目录：
+   ```bash
+   mkdir -p robot_ws/src
+   cd robot_ws/src
+   ```
+
+### 2. 克隆包到src目录
+
+在`src`目录中，克隆你希望使用的ROS包。例如，从GitHub克隆一个包：
+   ```bash
+   git clone https://github.com/RoboMaster/RoboRTS-Base.git
+   ```
+
+### 3. 编译工作空间
+
+1. 返回到工作空间的根目录：
+   ```bash
+   cd ~/Desktop/robot_ws
+   ```
+
+2. 使用`catkin_make`命令编译工作空间：
+   ```bash
+   catkin_make
+   ```
+
+### 4. 设置环境
+
+每次打开新的终端时，需要配置ROS环境变量，使新编译的包可用。你可以在`.bashrc`文件中添加下面一行来自动设置环境变量：
+   ```bash
+   echo "source ~/Desktop/robot_ws/devel/setup.bash" >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+或在每次使用前手动运行：
+   ```bash
+   source ~/Desktop/robot_ws/devel/setup.bash
+   ```
+
+### 例子总结
+
+以下是完整的命令列表，结合以上所有步骤：
+
 ```bash
-# Step 1: 安装必要的依赖包
-sudo apt-get update
-sudo apt-get install build-essential cmake git pkg-config libgtk-3-dev \
-libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev \
-libjpeg-dev libpng-dev libtiff-dev gfortran openexr libatlas-base-dev python3-dev python3-numpy \
-libtbb2 libtbb-dev libdc1394-22-dev
+# 1. 创建工作空间
+cd ~/Desktop
+mkdir -p robot_ws/src
+cd robot_ws/src
 
-# Step 2: 删除现有的 OpenCV 安装
-sudo apt-get remove --purge '*opencv*'
+# 2. 克隆ROS包
+git clone https://github.com/RoboMaster/RoboRTS-Base.git
 
-# Step 3: 下载 OpenCV 3 的源代码
-mkdir -p ~/opencv_build && cd ~/opencv_build
-git clone -b 3.4 https://github.com/opencv/opencv.git
-git clone -b 3.4 https://github.com/opencv/opencv_contrib.git
+# 3. 编译工作空间
+cd ~/Desktop/robot_ws
+catkin_make
 
-# Step 4: 编译和安装 OpenCV 3
-cd ~/opencv_build/opencv
-mkdir build && cd build
-cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=~/opencv_build/opencv_contrib/modules ..
-make -j$(nproc)
-sudo make install
-sudo ldconfig
+# 4. 设置环境（可选）
+echo "source ~/Desktop/robot_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 ```
+
+通过上述步骤，你可以创建一个ROS工作空间，克隆一个包并成功编译。
+
 
 
 
