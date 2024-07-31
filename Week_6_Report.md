@@ -4,6 +4,10 @@
 
 
    ```bash
+chmod +x ~/Desktop/robot_ws/src/roborts_base/src/chassis
+
+
+
 <launch>
     <master auto="start"/>
 
