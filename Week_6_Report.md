@@ -4,26 +4,29 @@
 
 
    ```bash
-chmod +x ~/Desktop/robot_ws/src/roborts_base/src/chassis
-
-
-
-<launch>
-    <master auto="start"/>
-
-    <!-- Load the Base Parameter -->
-    <rosparam command="load" file="$(find roborts_base)/config/base.yaml" />
-
-    <!-- Run the Base Node -->
-    <node pkg="roborts_base" type="roborts_base_node" name="roborts_base_node" output="screen" respawn="true" />
-
-    <node pkg="robort_base" type="chassis" name="chassis_node" />
-
-    <!-- Run move_base Node -->
-    <node pkg="move_base" type="move_base" name="move_base" output="screen">
-        <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/>
-    </node>
-</launch>
+Section "Monitor"
+  Identifier "Monitor0"
+  HorizSync 28.0-80.0
+  VertRefresh 48.0-75.0
+  # https://arachnoid.com/modelines/
+  # 1024x768 @ 60.00 Hz (GTF) hsync: 47.70 kHz; pclk: 64.11 MHz
+  Modeline "1360x768_60.00" 64.11 1024 1080 1184 1344 768 769 772 795 -HSync +Vsync
+EndSection
+Section "Device"
+  Identifier "Card0"
+  Driver "dummy"
+  VideoRam 256000
+EndSection
+Section "Screen"
+  DefaultDepth 24
+  Identifier "Screen0"
+  Device "Card0"
+  Monitor "Monitor0"
+  SubSection "Display"
+    Depth 24
+    Modes "1360x768_60.00"
+  EndSubSection
+EndSection
    ```
 
 
