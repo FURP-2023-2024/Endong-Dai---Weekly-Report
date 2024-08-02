@@ -8,9 +8,7 @@ Section "Monitor"
   Identifier "Monitor0"
   HorizSync 28.0-80.0
   VertRefresh 48.0-75.0
-  # https://arachnoid.com/modelines/
-  # 1024x768 @ 60.00 Hz (GTF) hsync: 47.70 kHz; pclk: 64.11 MHz
-  Modeline "1360x768_60.00" 64.11 1024 1080 1184 1344 768 769 772 795 -HSync +Vsync
+  Modeline "1920x1080_60.00" 172.80 1920 2040 2248 2576 1080 1081 1084 1118 -HSync +Vsync
 EndSection
 Section "Device"
   Identifier "Card0"
@@ -24,9 +22,10 @@ Section "Screen"
   Monitor "Monitor0"
   SubSection "Display"
     Depth 24
-    Modes "1360x768_60.00"
+    Modes "1920x1080_60.00"
   EndSubSection
 EndSection
+
    ```
 
 
