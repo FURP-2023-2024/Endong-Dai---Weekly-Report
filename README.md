@@ -22,7 +22,7 @@
 - **Unitree Go1 Simulation**
 
 ## Week 7
-- **Install Ubuntu and ROS on NUC system**
-
+- **Install Ubuntu and ROS on NUC System**
+  
 ## Week 8
-- **Build and Test RoboRTS-Base and navigation package**
+- **Build and Test RoboRTS-Base and navigation Package**
