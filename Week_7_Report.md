@@ -3,7 +3,7 @@
 ---
 
 
-### 1. Install Ubuntu and ROS on NUC System
+###  Install Ubuntu and ROS on NUC System
 
 **Note:** All guidances for installation are from Week 1-6
 
