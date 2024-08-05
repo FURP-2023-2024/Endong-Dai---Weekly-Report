@@ -20,3 +20,9 @@
 
 ## Week 6
 - **Unitree Go1 Simulation**
+
+## Week 7
+- **Install Ubuntu and ROS on NUC system**
+
+## Week 8
+- **Build and Test RoboRTS-Base and navigation package**
