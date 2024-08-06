@@ -1,31 +1,5 @@
 ```bash
-# RViz config file for Cartographer
-
-Global Options:
-  Fixed Frame: map
-  Background Color: 48; 48; 48
-  Frame Rate: 30
-  Default Light: true
-  Show Stats: false
-
-Grid:
-  Color: 160; 160; 160
-  Cell Size: 1
-  Plane: XY
-  Style: Lines
-  Line Style: Lines
-  Alpha: 0.5
-
-RobotModel:
-  Robot Description: robot_description
-
-LaserScan:
-  Topic: /scan
-  Size (m): 0.1
-  Color: 0; 255; 0
-  Style: Points
-  Alpha: 1
-  Autocompute Intensity Bounds: true
+ <node pkg="tf" type="static_transform_publisher" name="base_to_laser" args="0 0 0 0 0 0 base_link laser 100" />
  ```
 
 
