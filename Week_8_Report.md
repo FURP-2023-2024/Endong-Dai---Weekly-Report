@@ -1,5 +1,33 @@
 ```bash
- <node pkg="tf" type="static_transform_publisher" name="base_to_laser" args="0 0 0 0 0 0 base_link laser 100" />
+<launch>
+  <!-- 启动 move_base -->
+  <node name="move_base" pkg="move_base" type="move_base" output="screen">
+    <param name="base_global_planner" value="navfn/NavfnROS"/> <!-- 全局规划器 -->
+    <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/> <!-- 局部规划器 -->
+    <rosparam command="load" file="$(find my_navigation_pkg)/config/costmap_common_parameters.yaml"/>
+    <rosparam command="load" file="$(find my_navigation_pkg)/config/local_costmap.yaml"/>
+    <rosparam command="load" file="$(find my_navigation_pkg)/config/global_costmap.yaml"/>
+  </node>
+
+  <!-- 启动 AMCL -->
+  <node name="amcl" pkg="amcl" type="amcl" output="screen">
+    <rosparam command="load" file="$(find my_navigation_pkg)/config/amcl_params.yaml"/>
+    <param name="odom_frame_id" value="odom"/>
+    <param name="base_frame_id" value="base_link"/>
+    <param name="global_frame_id" value="map"/>
+    <param name="tf_buffer_size" value="5.0"/>
+  </node>
+
+  <!-- 启动 map_server -->
+  <arg name="map_file" default="/home/noetic/Desktop/my_map.yaml"/> <!-- 修改为实际地图位置 -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- 启动 ROS TF 变换 -->
+  <!-- 将 map 到 base_link 改为 map 到 odom -->
+  <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0 0 0 0 0 0 map odom 100"/>
+
+  <!-- 需要一个节点发布 odom 到 base_link 的变换，例如里程计节点 -->
+</launch>
  ```
 
 
