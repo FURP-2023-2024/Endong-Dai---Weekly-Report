@@ -1,0 +1,29 @@
+<launch>
+    <!-- 启动机器人基础 -->
+    <include file="$(find roborts_base)/launch/base.launch">
+        <!-- 此处可以添加任何需要的参数 -->
+    </include>
+
+    <!-- 启动 RPLIDAR A2M8，串口 ttyUSB0 -->
+    <include file="$(find rplidar_ros)/launch/rplidar_a2m8.launch">
+        <arg name="serial_port" value="/dev/ttyUSB0"/> <!-- 串口设备1 -->
+        <arg name="frame_id" value="base_link"/> <!-- 根据需要调整 frame_id -->
+    </include>
+
+    <!-- 启动 RPLIDAR A2M8，串口 ttyACM0 -->
+    <include file="$(find rplidar_ros)/launch/rplidar_a2m8.launch">
+        <arg name="serial_port" value="/dev/ttyACM0"/> <!-- 串口设备2 -->
+        <arg name="frame_id" value="base_link"/> <!-- 根据需要调整 frame_id -->
+    </include>
+
+
+    <!-- 启动 Cartographer -->
+    <include file="$(find cartographer_ros)/launch/cartographer.launch">
+        <!-- 此处可以添加任何需要的参数，例如配置文件 -->
+    </include>
+
+    <!-- 启动 Move Base -->
+    <include file="$(find my_navigation_pkg)/launch/move_base.launch">
+        <!-- 此处可以添加任何需要的参数 -->
+    </include>
+</launch>
