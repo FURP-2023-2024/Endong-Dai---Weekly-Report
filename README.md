@@ -26,3 +26,7 @@
   
 ## Week 8
 - **Build and Test RoboRTS-Base and navigation Package**
+
+## Week 9
+- **Deployed Cartographer algorithm and Navigation package**
+
