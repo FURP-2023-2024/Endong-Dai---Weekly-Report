@@ -1,6 +1,3 @@
-## Week 9
-- **Deployed the Cartographer algorithm and Navigation package**
-
 ## Weekly Report 9 for FURP23/24 - Omni-directional-Robot-Collision-Awareness
 
 ---
